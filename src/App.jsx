@@ -7,7 +7,7 @@ import Works from './components/Works'
 
 const Container = styled.div`
 height: 100vh;
-background-color: rebeccapurple
+scroll-snap-type: mandatory;
 `
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     <Container>
       <Hero />
       <Who />
-      <Works /> 
+      <Works />
       <Contact />
     </Container>
   )
