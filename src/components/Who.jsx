@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Who() {
+const Who = () => {
   return (
-    <div>
-      
-    </div>
+    <div>Who</div>
   )
 }
+
+export default Who
