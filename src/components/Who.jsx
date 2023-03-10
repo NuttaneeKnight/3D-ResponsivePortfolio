@@ -47,7 +47,7 @@ const Button = styled.button`
   background-color: #0c6980;
   color: white;
   font-weight: 500;
-  width: 100px;
+  width: 120px;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -60,15 +60,13 @@ const Who = () => {
       <Container>
         <Left>{/* 3D model */}</Left>
         <Right>
-          <Title>Think. Create. Solve.</Title>
+          <Title>Think Outside of The Box</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
-            <Subtitle>What I Do</Subtitle>
+            <Subtitle>Who am I ?</Subtitle>
           </WhatWeDo>
-          <Desc>
-            I enjoy creating interactive, human-centered digital experience.
-          </Desc>
-          <Button>Learn More</Button>
+          <Desc>I am a full-stack developer who has a passion for arts.</Desc>
+          <Button>See My Works</Button>
         </Right>
       </Container>
     </Section>
