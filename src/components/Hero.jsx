@@ -103,5 +103,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-// Download folder 29
