@@ -17,6 +17,10 @@ const Title = styled.h1`
   height: 100vh;
   scroll-snap-align: center;
 `;
+const Form = styled.input`
+  height: 100vh;
+  scroll-snap-align: center;
+`;
 const Input = styled.input`
   height: 100vh;
   scroll-snap-align: center;
@@ -34,8 +38,15 @@ const Right = styled.div`
   scroll-snap-align: center;
 `;
 
-function Contact() {
-  return <Section>Contact</Section>;
-}
+const Contact = () => {
+  return (
+    <Section>
+      <Container>
+        <Left></Left>
+        <Right></Right>
+      </Container>
+    </Section>
+  );
+};
 
 export default Contact;
