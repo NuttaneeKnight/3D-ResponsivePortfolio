@@ -1,17 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const Section = styled.div`
   display: flex;
   justify-content: center;
-`
+`;
 const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-`
+`;
 const Links = styled.div`
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@ const Links = styled.div`
 
 const Logo = styled.img`
   height: 50px;
-  margin: 20px
+  margin: 20px;
 `;
 
 const List = styled.ul`
@@ -33,28 +33,34 @@ const List = styled.ul`
   }
 `;
 const ListItem = styled.li`
-  
-`
+  cursor: pointer;
+`;
 const Icon = styled.img`
-  
-`
+  width: 20px
+  cursor: pointer;
+`;
 const Icons = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-`
+`;
 
 const Button = styled.button`
-  
-`
-
+  width: 100px;
+  padding: 10px;
+  background-color: #27379b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
 
 const Navbar = () => {
   return (
     <Section>
       <Container>
         <Links>
-          <Logo src='./img/logo.png' />
+          <Logo src="./img/logo.png" />
           <List>
             <ListItem>Home</ListItem>
             <ListItem>Studio</ListItem>
@@ -63,12 +69,12 @@ const Navbar = () => {
           </List>
         </Links>
         <Icons>
-          <Icon src='./img/search.png' />
+          <Icon src="./img/search.png" />
           <Button>Hire Now</Button>
         </Icons>
       </Container>
     </Section>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
