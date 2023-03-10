@@ -7,6 +7,7 @@ const Section = styled.div`
   scroll-snap-align: center;
 `
 
+
 const Hero = () => {
   return (
     <Section>
