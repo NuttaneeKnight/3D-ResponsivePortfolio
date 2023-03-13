@@ -30,6 +30,8 @@ const Form = styled.form`
 const Input = styled.input`
   padding: 20px;
   background-color: lightgray;
+  border: none;
+  border-radius: 5px;
 `;
 const TextArea = styled.textarea`
   padding: 20px;
