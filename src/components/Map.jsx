@@ -4,17 +4,17 @@ import {
   Geographies,
   Geography,
   Annotation,
-  ZoomableGroup
+  ZoomableGroup,
 } from "react-simple-maps";
 
-const MapChart = () => {
+const Map = () => {
   return (
     <ComposableMap
       projection="geoAzimuthalEqualArea"
       projectionConfig={{
         rotate: [-10.0, -52.0, 0],
         center: [-5, -3],
-        scale: 1100
+        scale: 1100,
       }}
     >
       <Geographies
@@ -36,7 +36,7 @@ const MapChart = () => {
         connectorProps={{
           stroke: "#FF5533",
           strokeWidth: 3,
-          strokeLinecap: "round"
+          strokeLinecap: "round",
         }}
       >
         <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#F53">
@@ -47,4 +47,4 @@ const MapChart = () => {
   );
 };
 
-export default MapChart;
+export default Map;
