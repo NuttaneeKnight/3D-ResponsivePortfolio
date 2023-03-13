@@ -35,8 +35,19 @@ const Input = styled.input`
 `;
 const TextArea = styled.textarea`
   padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightgray;
 `;
-const Button = styled.button``;
+const Button = styled.button`
+  background-color: #0c6980;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px;
+`;
 const Right = styled.div`
   flex: 1;
 `;
@@ -50,7 +61,7 @@ const Contact = () => {
             <Title>Contact</Title>
             <Input placeholder="Name" />
             <Input placeholder="Email" />
-            <TextArea placeholder="Message" />
+            <TextArea placeholder="Message" rows={10} />
             <Button>Send</Button>
           </Form>
         </Left>
