@@ -54,39 +54,43 @@ const Right = styled.div`
   flex: 1;
 `;
 
-const ref = useRef();
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  //service id    //template id   //public key
-  emailjs
-    .sendForm(
-      "service_5kp9ikv",
-      "template_0fitd3a",
-      ref.current,
-      "XPuWzxXNpQ2xqb3GL"
-    )
-    .then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
-};
-
 const Contact = () => {
+  const ref = useRef();
+  const [success, setSuccess] = useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //service id    //template id   //public key
+    emailjs
+      .sendForm(
+        "service_5kp9ikv",
+        "template_0fitd3a",
+        ref.current,
+        "XPuWzxXNpQ2xqb3GL"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setSuccess(false);
+        }
+      );
+  };
+
   return (
     <Section>
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact</Title>
-            <Input placeholder="Name" />
-            <Input placeholder="Email" />
-            <TextArea placeholder="Message" rows={10} />
+            <Input placeholder="Name" name="name" />
+            <Input placeholder="Email" email="email" />
+            <TextArea placeholder="Message" rows={10} message="message" />
             <Button type="submit">Send</Button>
+            {success && "Your message has been sent"}
           </Form>
         </Left>
         <Right>
@@ -98,3 +102,4 @@ const Contact = () => {
 };
 
 export default Contact;
+//57
