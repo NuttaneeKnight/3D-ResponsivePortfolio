@@ -58,15 +58,22 @@ const ref = useRef();
 
 const handleSubmit = (e) => {
   e.preventDefault();
-
-  emailjs.sendForm("", "", ref.current, "").then(
-    (result) => {
-      console.log(result.text);
-    },
-    (error) => {
-      console.log(error.text);
-    }
-  );
+  //service id    //template id   //public key
+  emailjs
+    .sendForm(
+      "service_5kp9ikv",
+      "template_0fitd3a",
+      ref.current,
+      "XPuWzxXNpQ2xqb3GL"
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
 };
 
 const Contact = () => {
@@ -91,4 +98,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
