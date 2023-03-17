@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import Map from "./Map";
 
@@ -52,8 +53,20 @@ const Button = styled.button`
 const Right = styled.div`
   flex: 1;
 `;
+
+const ref = useRef();
+
 const handleSubmit = (e) => {
   e.preventDefault();
+
+  emailjs.sendForm("", "", ref.current, "").then(
+    (result) => {
+      console.log(result.text);
+    },
+    (error) => {
+      console.log(error.text);
+    }
+  );
 };
 
 const Contact = () => {
@@ -61,7 +74,7 @@ const Contact = () => {
     <Section>
       <Container>
         <Left>
-          <Form onSubmit={handleSubmit}>
+          <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact</Title>
             <Input placeholder="Name" />
             <Input placeholder="Email" />
@@ -78,4 +91,4 @@ const Contact = () => {
 };
 
 export default Contact;
-//54
+
